@@ -1,22 +1,85 @@
-# Wedding Booking Backend (FastAPI)
+## Wedding Booking Backend (FastAPI)
 
-## Features
-- Create wedding bookings
-- Fetch all bookings
-- MongoDB integration
-- Swagger UI for API testing
+This project is a backend application developed using FastAPI for managing wedding event bookings.
+It provides REST APIs to create and retrieve booking data and uses MongoDB for persistent storage.
+
+The backend follows a clean and modular FastAPI structure with separate files for application startup,
+database configuration, and API routes.
+
+## What the Project Does
+- Accepts wedding booking details through REST APIs
+- Stores booking data in MongoDB
+- Retrieves all stored bookings from the database
+- Provides Swagger UI for testing APIs
 
 ## Tech Stack
-- FastAPI
-- MongoDB
 - Python
+- FastAPI
+- MongoDB (Atlas)
+- Uvicorn
+- Motor (Async MongoDB driver)
 
 ## API Endpoints
-- GET / → Health check
-- POST /book → Create booking
-- GET /bookings → Fetch all bookings
 
-## Swagger UI
-Available locally at:
+## GET /
+Used to check whether the backend is running.
+
+## POST /book
+Creates a new wedding booking and stores it in MongoDB.
+
+## Sample Request Body:
+```json
+{
+  "name": "Anjali",
+  "event_type": "Wedding",
+  "date": "2025-02-10",
+  "guests": 200
+}
+```
+
+## GET /bookings
+Fetches all wedding bookings stored in the MongoDB database.
+
+## Swagger UI is enabled in this project and is available locally at:
 http://127.0.0.1:8001/docs
+
+## How to Run the Project
+
+Create and activate a virtual environment
+
+python -m venv .venv
+.venv\Scripts\activate
+
+
+## Install required dependencies
+
+pip install fastapi uvicorn motor python-dotenv
+
+
+Run the FastAPI server
+
+uvicorn app.main:app --reload --port 8001
+
+
+Open Swagger UI in the browser
+
+http://127.0.0.1:8001/docs
+
+## Database
+
+MongoDB Atlas is used as the database
+
+Booking data is stored in the bookings collection
+
+MongoDB connection is handled asynchronously using Motor
+
+## Notes
+
+This is a backend-only project
+
+No frontend is included
+
+Environment variables are managed using .env
+
+Project follows FastAPI best practices
 
