@@ -1,25 +1,22 @@
 # Wedding Booking Backend (FastAPI)
 
-This is a backend service built using **FastAPI** for managing wedding bookings.
-
 ## Features
-- Create a wedding booking
+- Create wedding bookings
 - Fetch all bookings
 - MongoDB integration
-- Interactive API docs using Swagger
+- Swagger UI for API testing
 
 ## Tech Stack
-- Python
 - FastAPI
 - MongoDB
-- Uvicorn
+- Python
 
 ## API Endpoints
-- `GET /` → Health check
-- `POST /book` → Create a booking
-- `GET /bookings` → Get all bookings
+- GET / → Health check
+- POST /book → Create booking
+- GET /bookings → Fetch all bookings
 
-## How to Run
-```bash
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+## Swagger UI
+Available locally at:
+http://127.0.0.1:8001/docs
+
