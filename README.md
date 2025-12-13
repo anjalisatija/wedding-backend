@@ -41,7 +41,8 @@ Creates a new wedding booking and stores it in MongoDB.
 Fetches all wedding bookings stored in the MongoDB database.
 
 ## Swagger UI is enabled in this project and is available locally at:
-http://127.0.0.1:8001/docs
+[http://127.0.0.1:8001/docs](http://127.0.0.1:8000/docs)
+Note: The port may vary if changed while running uvicorn.
 
 ## How to Run the Project
 
