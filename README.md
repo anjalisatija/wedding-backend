@@ -1,86 +1,71 @@
-## Wedding Booking Backend (FastAPI)
+# Cloud-Based Wedding Booking Management API
 
-This project is a backend application developed using FastAPI for managing wedding event bookings.
-It provides REST APIs to create and retrieve booking data and uses MongoDB for persistent storage.
+A production-ready backend API built using FastAPI for managing wedding event bookings.  
+This system allows users to create and retrieve booking records via RESTful endpoints.  
+The application is deployed on cloud infrastructure and connected to MongoDB Atlas.
 
-The backend follows a clean and modular FastAPI structure with separate files for application startup,
-database configuration, and API routes.
+---
 
-## What the Project Does
-- Accepts wedding booking details through REST APIs
-- Stores booking data in MongoDB
-- Retrieves all stored bookings from the database
-- Provides Swagger UI for testing APIs
+##  Live Deployment
+
+Base URL:
+https://wedding-backend-pt26.onrender.com
+
+Interactive API Documentation (Swagger UI):
+https://wedding-backend-pt26.onrender.com/docs
+
+---
 
 ## Tech Stack
+
 - Python
 - FastAPI
-- MongoDB (Atlas)
+- MongoDB Atlas (Cloud Database)
+- Motor (Async MongoDB Driver)
 - Uvicorn
-- Motor (Async MongoDB driver)
+- Render (Cloud Deployment)
+- RESTful API Architecture
 
-## API Endpoints
+---
 
-## GET /
-Used to check whether the backend is running.
+##  Features
 
-## POST /book
-Creates a new wedding booking and stores it in MongoDB.
+- Create new wedding bookings
+- Retrieve all stored bookings
+- Cloud database integration (MongoDB Atlas)
+- Fully deployed backend on Render
+- Interactive Swagger UI for API testing
+- Modular and clean project structure
 
-## Sample Request Body:
-```json
+---
+
+##  API Endpoints
+
+### GET /
+Health check endpoint to verify backend status.
+
+### POST /book
+Creates a new wedding booking.
+
+Sample Request:
 {
   "name": "Anjali",
   "event_type": "Wedding",
   "date": "2025-02-10",
   "guests": 200
 }
-```
 
-## GET /bookings
-Fetches all wedding bookings stored in the MongoDB database.
+### GET /bookings
+Fetches all stored wedding bookings.
 
-## Swagger UI is enabled in this project and is available locally at:
-[http://127.0.0.1:8001/docs](http://127.0.0.1:8000/docs)
-Note: The port may vary if changed while running uvicorn.
+---
 
-## How to Run the Project
+##  Project Structure
 
-Create and activate a virtual environment
+- main.py – Application entry point
+- database.py – MongoDB configuration
+- routes/ – API route definitions
 
-python -m venv .venv
-.venv\Scripts\activate
+---
 
-
-## Install required dependencies
-
-pip install fastapi uvicorn motor python-dotenv
-
-
-Run the FastAPI server
-
-uvicorn app.main:app --reload --port 8001
-
-
-Open Swagger UI in the browser
-
-http://127.0.0.1:8001/docs
-
-## Database
-
-MongoDB Atlas is used as the database
-
-Booking data is stored in the bookings collection
-
-MongoDB connection is handled asynchronously using Motor
-
-## Notes
-
-This is a backend-only project
-
-No frontend is included
-
-Environment variables are managed using .env
-
-Project follows FastAPI best practices
-
+This project demonstrates backend development, cloud deployment, REST API design, and database integration skills.
